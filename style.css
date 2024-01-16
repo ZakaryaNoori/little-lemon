@@ -75,11 +75,13 @@ nav ul li a {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 32px;
-    h2 {
+    h3 {
       margin-top: 0;
+      animation: fadeInFromUp 0.5s ease-in-out;
     }
     p {
       max-width: 65ch;
+      animation: fadeInFromDown 0.5s ease-in-out;
     }
     table {
       width: 100%;
@@ -101,4 +103,26 @@ footer.container {
   margin-top: 40px;
   border-top: 1px solid #ccc;
   padding-top: 40px;
+}
+
+@keyframes fadeInFromUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
